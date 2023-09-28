@@ -62,7 +62,7 @@ To understand the characteristics of the equipment losses of Russia, the losses 
 
 **Summary**
 
-Russian tank losses are becoming increasingly numerous because of the intensity of the counteroffensive. The tank fleet remains primarily the T-80BV variant. However, as these stocks dwindle over time, they are increasingly replaced with newer models like the T-90M. Russia still retains large stocks of older T-72 variants but are relatively proportionate to the number of 
+Russian tank losses are becoming increasingly numerous because of the intensity of the counteroffensive. The tank fleet remains primarily the T-80BV variant. However, as these stocks dwindle over time, they are increasingly replaced with newer models like the T-90M. Russia still retains large stocks of older T-72 variants but are loss at a rate that is proportionate to the number of T-80BV losses.
 The underlying data is based on visually confirmed evidence and so this data does not provide a complete picture of equipment losses in Ukraine but it provides a rough picture of the battlefield.
 
 
