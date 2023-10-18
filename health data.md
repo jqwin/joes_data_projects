@@ -48,3 +48,26 @@ ORDER BY avg_qual_sleep;
 
 In this query, we can see a linear relationship between BMI category and sleep quality. People who are obese and overweight will have worse sleep quality than those who are normal weight or normal. There is also a correlated relationship with average steps and heart rate. Higher heart rate averages will be higher in those that are obese. Those who are obese will have lower than average steps as well. Each of these metrics are likely related to sedentry lifestyle choices. 
 
+Lower heart rates with respect to BMI category indicate an inverse relationship with sleep quality. Meaning that lower heart rate averages are associated with higher sleep quality. To analyze this, we must aggregate the metrics by varying heart rate ranges.
+
+```
+SELECT 
+CASE
+	WHEN heart_rate BETWEEN 65 and 70 THEN '65-70'
+	WHEN heart_rate BETWEEN 71 and 75 THEN '71-75'
+	WHEN heart_rate BETWEEN 76 and 80 THEN '76-80'
+	WHEN heart_rate BETWEEN 81 and 86 THEN '81-86'
+END AS heart_range
+, avg(quality_of_sleep) AS avg_qual_sleep
+, avg(daily_steps) AS avg_steps
+, avg(physical_activity_level) AS avg_phy_act
+, avg(stress_level) AS avg_stress
+, avg(sleep_duration) as avg_sleep_dur
+FROM sleep_detail
+GROUP by heart_range
+ORDER BY heart_range;
+```
+
+![image](https://github.com/jqwin/joes_data_projects/assets/138724732/9364c156-b077-46a7-ad11-d04782b4ef4c)
+
+We can see several correlative relationships with average steps, average physical activity, and average stress in respect to quality of sleep and heart rate. In general this reinforces the positive nature of a physically active lifestyle. If a patient is actively walking more and doing more physical activities, these all contribute to a lower heart rate and better sleep quality.
