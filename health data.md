@@ -71,3 +71,19 @@ ORDER BY heart_range;
 ![image](https://github.com/jqwin/joes_data_projects/assets/138724732/9364c156-b077-46a7-ad11-d04782b4ef4c)
 
 We can see several correlative relationships with average steps, average physical activity, and average stress in respect to quality of sleep and heart rate. In general this reinforces the positive nature of a physically active lifestyle. If a patient is actively walking more and doing more physical activities, these all contribute to a lower heart rate and better sleep quality.
+
+Visualization:
+
+![image](https://github.com/jqwin/joes_data_projects/assets/138724732/08b021c4-bfdc-43b7-bd89-56cdeea318b2)
+
+Starting from the top left and ending bottom right:
+- Sleep Quality Rating and Heart Rate
+- Sleep Quality Rating and Sleep Duration
+- Physical Activity Level and Sleep Quality Rating
+- Stress Level Rating and Sleep Quality Rating
+
+All of these graphs demonstrate varying degrees of correlation between various matrics and sleep quality. If the trendline is steep than the correlation is stronger between the metric and sleep quality. Generally, we can see that having a lower heart rate is associated with better sleep quality which reinforces the aggregated metrics earlier. Intuitively, we can also see that sleeping longer is also indicative of better sleep quality. In terms of physical activity level, the data points are nosier but it generally shows a positive relationship between higher activity levels and sleep quality. We can see outliers where there are high quality sleepers with low activity levels and vice versa. The last graph is also intuitive, lower stress ratings are indicative of better sleep quality.
+
+
+
+
