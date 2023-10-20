@@ -7,7 +7,12 @@ Questions to answer:
 2. Does an increased physical activity level result in a better quality of sleep?
 3. Does the presence of a sleep disorder affect the subjective sleep quality metric?
 
-Initial Data Survey:
+Tools used:
+1. PostgreSQL DB
+2. PowerBI
+
+
+## Initial Data Survey:
 
 To understand the landscape of the data, we need to aggregate the data by classifications and available measures. In the code below, each metric is grouped by sleep disorder.
 
@@ -26,7 +31,7 @@ ORDER by avg_qual_sleep;
 
 ![image](https://github.com/jqwin/joes_data_projects/assets/138724732/5a00b56c-e796-4649-9dc1-b01587a4df15)
 
-Based on the data above, we can see a relationship where having no sleep disorder has the best average quality of sleep at a 7.62 rating. Patients that have insomnia and sleep apnea have lower sleep ratings at 6.53 and 7.20 respectively. A patient having a sleep disorder will likely have a sleep quality that is worse than someone who doesn't have a sleep order. 
+Based on the data above, we can see having no sleep disorder has the best average quality of sleep at a 7.62 rating. Patients that have insomnia and sleep apnea have lower sleep ratings at 6.53 and 7.20 respectively. A patient having a sleep disorder will likely have a sleep quality that is worse than someone who doesn't have a sleep order. 
 
 Another classification that we can group results by is BMI category.
 
@@ -72,18 +77,24 @@ ORDER BY heart_range;
 
 We can see several correlative relationships with average steps, average physical activity, and average stress in respect to quality of sleep and heart rate. In general this reinforces the positive nature of a physically active lifestyle. If a patient is actively walking more and doing more physical activities, these all contribute to a lower heart rate and better sleep quality.
 
-Visualization:
+## Visualizations:
 
 ![image](https://github.com/jqwin/joes_data_projects/assets/138724732/08b021c4-bfdc-43b7-bd89-56cdeea318b2)
 
-Starting from the top left and ending bottom right:
+Starting from left to right and top to bottom:
 - Sleep Quality Rating and Heart Rate
-- Sleep Quality Rating and Sleep Duration
 - Physical Activity Level and Sleep Quality Rating
+- Sleep Quality Rating and Sleep Duration
 - Stress Level Rating and Sleep Quality Rating
 
-All of these graphs demonstrate varying degrees of correlation between various matrics and sleep quality. If the trendline is steep than the correlation is stronger between the metric and sleep quality. Generally, we can see that having a lower heart rate is associated with better sleep quality which reinforces the aggregated metrics earlier. Intuitively, we can also see that sleeping longer is also indicative of better sleep quality. In terms of physical activity level, the data points are nosier but it generally shows a positive relationship between higher activity levels and sleep quality. We can see outliers where there are high quality sleepers with low activity levels and vice versa. The last graph is also intuitive, lower stress ratings are indicative of better sleep quality.
+All of these graphs demonstrate varying degrees of correlation between different matrics and sleep quality. If the trendline is steep than the correlation is stronger between the metric and sleep quality. In the first graph, we can see that having a lower heart rate is associated with better sleep quality which reinforces the aggregated metrics earlier. Intuitively, we can also see that sleeping longer is also indicative of better sleep quality. In terms of physical activity level, the data points are nosier but it generally shows a positive relationship between higher activity levels and sleep quality. We can see outliers where there are high quality sleepers with low activity levels and vice versa. The last graph is also intuitive, lower stress ratings are indicative of better sleep quality.
 
+![image](https://github.com/jqwin/joes_data_projects/assets/138724732/1786daa5-d2fd-4363-b681-798a3615d482)
 
+Let's consider sleep quality with respect to age. In this scatterplot, we can see a positive slope with a wide dispersion of data points. Generally as you get older, the better quality of sleep you get. This could be due to people getting into retirement age and having more time to sleep because of less work. However, there is siginficant variance in the data since the data points are not closely clustered. This weakens the relationship but it doesn't discount the relationship entirely. There are likely to be stronger factors than age with regards to sleep quality.
+
+## Summary
+
+In our intial data survey, we are able to easily indicate that having a sleep disorder is associated with worse sleep quality than not having one. When analyzig with respect to physical acitivty, higher activity levels are positively correlated with higher sleep quality. Adjacent metrics to physical activity such as number of steps and heart rates are positively correlated with better sleep quality. It can be inferred that patients with more active lifestyles will likely have better sleep quality. This is especially true if the demographic is classified by BMI category and varying heart rate brackets. This is likely due to the stress related benefits of having exercise. Although these metrics mutually reinforcing, it is worth cautioning that the data does not account for idiosyncratic factors related to a patient's lifestyle choices nor do we know if this data is representative of a population. While the mentioned factors are strong, they are by no means completely determinant. 
 
 
