@@ -27,6 +27,23 @@ GROUP BY member_casual;
 ```
 ![image](https://github.com/jqwin/joes_data_projects/assets/138724732/5ae70b1e-2a81-4ed6-b430-4ed60b7046c3)
 
-Immmediately we can tell that the majority of rides during this date are members. Casaul users are make a siginificant portion as well.
+Immmediately we can tell that the majority of rides during this date are members. Casaul users make a siginificant portion of rides as well. For a stakeholder, they will need to consider the behaviors and preferences of these groups.
 
+Another answer we can answer is the average ride time during this day.
+```
+SELECT(AVG(total_seconds)) AS avg_seconds	
+FROM
+	(	
+	SELECT
+		(EXTRACT(MINUTE FROM (ended_at - started_at)) * 60) +
+		(EXTRACT(SECOND FROM (ended_at - started_at))) AS total_seconds
+	FROM bikeshare_records
+	)
+subquery;
+```
+In this query, we need to normalize the time stamps in terms of seconds. So the EXTRACT function is utlized to pull the minutes and seconds which we then convert the minutes to get total_seconds. The conversion is done in a nested query which we can then calculate the average in the outer query.
+
+![image](https://github.com/jqwin/joes_data_projects/assets/138724732/340d31f5-c7ee-4976-9ed3-fcd87157ff84)
+
+The average ride lasts approximately 798 seconds or 13 minutes. 
 
