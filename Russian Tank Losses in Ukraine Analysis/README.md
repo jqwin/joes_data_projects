@@ -47,23 +47,23 @@ The Ukrainian counteroffensive is an ongoing campaign that started on June 4, 20
 To understand the characteristics of the equipment losses of Russia, the losses from the start of the war needs to be compared against with more current data.
 
 **From Feb 24, 2022 to June 3, 2023 - Before the counteroffensive**
-![image](https://github.com/jqwin/joes_data_projects/assets/138724732/5584089e-53ef-4067-8eae-4a0feccc845d)
--	T-80BV tanks comprise a large portion of tank losses and are the most numerous main battle tank that the ground army is using.
--	T-72 pattern vehicles are older but approximately are over half of tank losses.
+![image](https://github.com/jqwin/joes_data_projects/assets/138724732/7db06434-5ec3-4f21-9577-b1113ef63e61)
+-	T-80BV tanks are the most numerous type of tank that was lost before the summer counteroffensive(18% of losses)
+-	T-72 pattern vehicles are older but approximately are around 40% of losses
 -	The Russian ground forces are primary using midline grade tanks with good all-around performance in the T-80BV.
+-	The T-80 series of tank has improved mobility and electronics over the T-72 series
 -	This usage pattern strikes a balance by providing acceptable capability with older T-72 variants taking the brunt of attrition.
 
 **From June 4, 2023 to now - The ongoing counteroffensive**
 ![image](https://github.com/jqwin/joes_data_projects/assets/138724732/33eb33af-ead2-4eab-979c-6c446ae72514)
--	The T-80BV still remains the top variant that is being used by the Russian ground forces with an increase of ~5%.
+-	The T-80BV still remains the top variant and is **now taking close to 40%** of tank losses
 -	Newer variants are becoming more common with the T-90M being increasingly fielded.
--	Total tank losses in the summer counteroffensive are greater than the months preceding. 205 losses vs. 157.
--	The total losses indicate a higher tempo of the battle.
+-	Overall tank losses are at 1,717 which is a substantial amount of equipment lost
+-	Ukrainian government reports a total of 5,112 losses(as of Oct 25)
 
 **Summary**
 
-Russian tank losses are becoming increasingly numerous because of the intensity of the counteroffensive. The tank fleet remains primarily the T-80BV variant. However, as these stocks dwindle over time, they are increasingly replaced with newer models like the T-90M. Russia still retains large stocks of older T-72 variants but are lost at a rate that is proportionate to the number of T-80BV losses.
-The underlying data is based on visually confirmed evidence and so this data does not provide a complete picture of equipment losses in Ukraine but it provides a rough picture of the battlefield.
+Russian tank losses are becoming increasingly numerous because of the intensity of the counteroffensive. The tank fleet still primarily uses the T-80BV variant. However, as these stocks dwindle over time, they are increasingly replaced with newer models like the T-90M. Russia still retains large stocks of older T-72 variants which they are fielding to balance out attrition in this counteroffensive. The underlying data is based on visually confirmed evidence and so this data does not provide a complete picture of equipment losses in Ukraine but it provides a rough picture of the battlefield.
 
 
 
