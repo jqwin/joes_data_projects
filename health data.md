@@ -14,7 +14,7 @@ Tools used:
 
 ## Initial Data Survey:
 
-To understand the landscape of the data, we need to aggregate the data by classifications and available measures. In the code below, each metric is grouped by sleep disorder.
+To understand the data landscape, we need to aggregate the data by classifications and available measures. Below, each metric is grouped by sleep disorder:
 
 ```
 SELECT 
@@ -31,9 +31,9 @@ ORDER by avg_qual_sleep;
 
 ![image](https://github.com/jqwin/joes_data_projects/assets/138724732/5a00b56c-e796-4649-9dc1-b01587a4df15)
 
-Based on the data above, we can see having no sleep disorder has the best average quality of sleep at a 7.62 rating. Patients that have insomnia and sleep apnea have lower sleep ratings at 6.53 and 7.20 respectively. A patient having a sleep disorder will likely have a sleep quality that is worse than someone who doesn't have a sleep order. 
+From the data above, we observe that individuals without a sleep disorder have the highest average sleep quality, with a rating of 7.62. In contrast, those with insomnia and sleep apnea have lower sleep quality ratings, at 6.53 and 7.20 respectively. Thus, having a sleep disorder is likely associated with poorer sleep quality.
 
-Another classification that we can group results by is BMI category.
+Next, we group the results by BMI category:
 
 ```
 SELECT 
@@ -51,9 +51,9 @@ ORDER BY avg_qual_sleep;
 
 ![image](https://github.com/jqwin/joes_data_projects/assets/138724732/a271cc33-07df-43a9-bd1b-97f456a8b466)
 
-In this query, we can see a linear relationship between BMI category and sleep quality. People who are obese and overweight will have worse sleep quality than those who are normal weight or normal. There is also a correlated relationship with average steps and heart rate. Higher heart rate averages will be higher in those that are obese. Those who are obese will have lower than average steps as well. Each of these metrics are likely related to sedentry lifestyle choices. 
+This query reveals a linear relationship between BMI category and sleep quality. Individuals who are obese or overweight tend to have poorer sleep quality than those of normal weight. There is also a correlated relationship with average daily steps and heart rate: higher heart rates are associated with obesity, while lower daily step counts are also observed in this group. These metrics suggest a connection to sedentary lifestyle choices.
 
-Lower heart rates with respect to BMI category indicate an inverse relationship with sleep quality. Meaning that lower heart rate averages are associated with higher sleep quality. To analyze this, we must aggregate the metrics by varying heart rate ranges.
+Lower heart rates in different BMI categories are inversely related to sleep quality; that is, lower average heart rates are associated with better sleep quality. To analyze this, we must aggregate the metrics across various heart rate ranges:
 
 ```
 SELECT 
@@ -75,7 +75,7 @@ ORDER BY heart_range;
 
 ![image](https://github.com/jqwin/joes_data_projects/assets/138724732/9364c156-b077-46a7-ad11-d04782b4ef4c)
 
-We can see several correlative relationships with average steps, average physical activity, and average stress in respect to quality of sleep and heart rate. In general this reinforces the positive nature of a physically active lifestyle. If a patient is actively walking more and doing more physical activities, these all contribute to a lower heart rate and better sleep quality.
+This data supports the positive impact of a physically active lifestyle on heart rate and sleep quality. Higher levels of physical activity and daily steps contribute to lower heart rates and better sleep quality.
 
 ## Visualizations:
 
@@ -87,7 +87,7 @@ Starting from left to right and top to bottom:
 - Sleep Quality Rating and Sleep Duration
 - Stress Level Rating and Sleep Quality Rating
 
-All of these graphs demonstrate varying degrees of correlation between different matrics and sleep quality. If the trendline is steep than the correlation is stronger between the metric and sleep quality. In the first graph, we can see that having a lower heart rate is associated with better sleep quality which reinforces the aggregated metrics earlier. Intuitively, we can also see that sleeping longer is also indicative of better sleep quality. In terms of physical activity level, the data points are nosier but it generally shows a positive relationship between higher activity levels and sleep quality. We can see outliers where there are high quality sleepers with low activity levels and vice versa. The last graph is also intuitive, lower stress ratings are indicative of better sleep quality.
+All of these graphs demonstrate varying degrees of correlation between different matrics and sleep quality. If the trendline is steep than the correlation is stronger between the metric and sleep quality. In the first graph, we can see that having a lower heart rate is associated with better sleep quality which reinforces the aggregated metrics earlier. Intuitively, we can also see that sleeping longer is also indicative of better sleep quality. In terms of physical activity level, the data points are nosier but it generally shows a positive relationship between higher activity levels and sleep quality. We can see outliers where there are high quality sleepers with low activity levels and vice versa. The last graph is intuitive, lower stress ratings are indicative of better sleep quality.
 
 ![image](https://github.com/jqwin/joes_data_projects/assets/138724732/1786daa5-d2fd-4363-b681-798a3615d482)
 
@@ -95,6 +95,5 @@ Let's consider sleep quality with respect to age. In this scatterplot, we can se
 
 ## Summary
 
-In our intial data survey, we are able to easily indicate that having a sleep disorder is associated with worse sleep quality than not having one. When analyzig with respect to physical acitivty, higher activity levels are positively correlated with higher sleep quality. Adjacent metrics to physical activity such as number of steps and heart rates are positively correlated with better sleep quality. It can be inferred that patients with more active lifestyles will likely have better sleep quality. This is especially true if the demographic is classified by BMI category and varying heart rate brackets. This is likely due to the stress related benefits of having exercise. Although these metrics mutually reinforcing, it is worth cautioning that the data does not account for idiosyncratic factors related to a patient's lifestyle choices nor do we know if this data is representative of a population. While the mentioned factors are strong, they are by no means completely determinant. 
-
+Our initial data survey indicates that the presence of a sleep disorder is associated with poorer sleep quality. Conversely, higher levels of physical activity correlate with better sleep quality, as do related metrics such as daily step count and heart rate. Active lifestyles are likely to result in better sleep quality, particularly for individuals classified by BMI category and heart rate brackets. These findings highlight the stress-reducing benefits of exercise. However, while these metrics are mutually reinforcing, it’s important to note that the data does not account for all individual lifestyle choices, and the representativeness of the data to a broader population is unknown. While the identified factors are significant, they are not solely determinative of sleep quality.
 
