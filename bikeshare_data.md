@@ -1,9 +1,9 @@
 # Divvy Bikeshare Analysis
 
-## Data Source:
+**Data Source:**
 This dataset contains information on Divvy Bikes, a bikeshare program that provides residents and visitors of Chicago with a convenient way to explore the city.
 
-The workspace is set up with one CSV file containing bikeshare activities at the peak of the summer-July 2023. Columns include ride ID, bike type, start and end times, station names and IDs, location coordinates, and member type. Feel free to make this workspace yours by adding and removing cells, or editing any of the existing cells.
+The dataset is one CSV file containing bikeshare activities for September 2023. Columns include ride ID, bike type, start and end times, station names and IDs, location coordinates, and member type.
 
 Questions to answer:
 1. What portion of rides are member versus casual?
@@ -13,9 +13,9 @@ Questions to answer:
 
 Tools used:
 1. PostgreSQL Database
-2. Tableau
+2. PowerBI
 
-Portionality of member versus casual riders:
+**Portionality of member versus casual riders:**
 
 For this question, we need to understand the demographic layout and see if there are patterns to their behaviors. Let's first look at the number of these riders by their respective class.
 
@@ -29,7 +29,9 @@ GROUP BY member_casual;
 
 Immmediately we can tell that the majority of rides during this date are members. Casaul users make a siginificant portion of rides as well. For a stakeholder, they will need to consider the behaviors and preferences of these groups.
 
-Another answer we can answer is the average ride time during this day.
+**Average ride time:**
+
+To answer average ride time, we need to calculate the difference between ride end time and start time. 
 ```
 SELECT(AVG(total_seconds)) AS avg_seconds	
 FROM
@@ -41,9 +43,30 @@ FROM
 	)
 subquery;
 ```
-In this query, we need to normalize the time stamps in terms of seconds. So the EXTRACT function is utlized to pull the minutes and seconds which we then convert the minutes to get total_seconds. The conversion is done in a nested query which we can then calculate the average in the outer query.
+In this query, we need to normalize the time stamps in terms of seconds. So the EXTRACT function is utlized to pull the minutes and seconds which we then convert the minutes to eventually get total_seconds. The conversion is done in a nested query which we can then calculate the average in the outer query.
 
 ![image](https://github.com/jqwin/joes_data_projects/assets/138724732/340d31f5-c7ee-4976-9ed3-fcd87157ff84)
 
-The average ride lasts approximately 798 seconds or 13 minutes. 
+The average ride lasts approximately 798 seconds or ~13 minutes.
+
+**Popular times to ride a bike:**
+
+A good way to answer this question is to create a histogram. A histogram is not a native chart type on PowerBI but there are workarounds for creating one. The method I chose was to bin the timestamps into standard increments like hour or minute. For this dataset, I binned the data via the grouping feature in terms of hour by creating a separate column to transform the original timestamp. In this transformation, I removed the minutes and seconds to classify each row by hour. 
+
+Once the data is binned, I used the bar chart template and used the column as both the X and Y axis. For the Y axis, I made sure to use the count function which ensured the data counts by the hour grouping. The first shows one day of data(Sep 1) and the second shows monthly average of September by hour.
+
+![image](https://github.com/jqwin/joes_data_projects/assets/138724732/a69a56ea-ccd0-44e2-9993-bdda662a3b65)
+
+![image](https://github.com/jqwin/joes_data_projects/assets/138724732/d7e75dd2-604a-4842-ba68-f76d7686ccd1)
+
+For both histograms, we can see a couple of trends:
+- Around 7-10am, we can begin to see rides start to climb as people start their day
+- This rate gradually increases and begins to peak towards the early evening around 4pm-6pm
+- Rides begin to decrease after 6pm and activity is at its lowest in the early morning
+
+In terms of differences:
+-Patterns are relatively the same but Sept 1 shows above average activity from 12pm-4pm
+
+
+
 
